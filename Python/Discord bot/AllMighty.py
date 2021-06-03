@@ -6,7 +6,7 @@ import random
 
 client = discord.Client()
 
-TOKEN = "ODIxMTA5MzAyMDA5NzkwNDc1.YE-7oQ.6bUR9LpAzN9C69PYMe6tNCkboJc"
+TOKEN = "Token"
 
 sad_words = ['sad','depressed','unhappy','miserable','depressing']
 
