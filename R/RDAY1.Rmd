@@ -1,0 +1,141 @@
+---
+title: "RDay1"
+author: "Subham Kundu"
+date: "4/5/2021"
+output: html_document
+---
+
+## Printing
+```{r}
+print("Hello World!")
+
+```
+
+## Documantation
+```{r}
+?print
+
+```
+
+## Assign Values 
+```{r}
+a <- 10
+#other methods( Don't use)
+a = 10
+10 -> a
+```
+
+##Data structure
+### 1. Vector
+Single value of a 1D collection of similar data
+
+#### Data types
+* Logical
+
+```{r}
+x1 <-TRUE
+typeof(x1)
+x2 <- F
+typeof(x2)
+
+```
+
+* Numeric (Double)
+
+```{r}
+ x3 <- 33.33
+typeof(x3)
+```
+
+* Numeric (Integer)
+
+```{r}
+ x4 <- 33L
+typeof(x4)
+```
+* Complex
+```{r}
+ x5 <- 7+5i
+print(x5)
+typeof(x5)
+
+```
+
+* Character
+```{r}
+x6 <- "Hello World!"
+x7 <- 'Hello World!'
+typeof(x6)
+typeof(x7)
+```
+* Raw
+```{r}
+x9 <- charToRaw("01234ABCD") # Unicode in hexadecimal
+print(x9)
+```
+#### Entering Data
+* Concatenate
+```{r}
+colors <- c('red','green','blue')
+nums <- c(1,2,3)
+print(colors)
+print(nums)
+```
+
+*colon
+```{r}
+x10 <- 1:10 # included
+print(x10)
+x11 <- 20:15
+print(x11)
+
+```
+* Sequence (seq)
+```{r}
+x12 <- seq(10)
+x13 <- seq(20,0,-2) # both included
+print(x12)
+print(x13)
+
+
+```
+* Scan 
+```{r}
+x <- scan()
+# Enter for next input or double enter to stop
+print(x)
+typeof(x)
+```
+
+* Replicate Elements(rep)
+```{r}
+x14 <- rep("Hello",5)
+x15 <- rep(c(10,20,30),2)
+print(x14)
+print(x15)
+```
+### 2. List
+```{r}
+#  It contains all types data
+list1 <- list(c(1,2,3),print,TRUE,"Hello")
+print(list1)
+```
+### 3. Matrix
+```{r}
+# Input is columnwise
+m1 <- matrix(c(1,2,3,4,5,6),nrow = 2) # we can use anything
+m2 <- matrix(c(1,2,3,4,5,6),nrow=2,byrow=T) # rowise
+print(m1)
+print(m2)
+```
+```{r}
+m1[1,2]
+x1[1]
+```
+### 4. Array
+```{r}
+a <- array(c('a','b'),dim=c(3,3,2)) # dim = c(rows,cols,no of tables)
+print(a)
+print(a[1,1,1])
+```
+

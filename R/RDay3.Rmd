@@ -1,0 +1,82 @@
+---
+title: "RDay3"
+output: html_document
+---
+```{r}
+library(datasets)
+head(iris)
+```
+
+## Conditional Selection
+```{r}
+hist(iris$Petal.Width[iris$Petal.Width < 2])
+```
+
+```{r}
+hist(iris$Petal.Width[iris$Petal.Width < 0.5 & iris$Species == 'setosa'])
+```
+
+Histogram of petal length for those flowers that is not setosa or have a petal width greater than 0.5
+```{r}
+hist(iris$Petal.Length[iris$Species != 'setosa' | iris$Petal.Width > 0.5])
+```
+
+## Linear Regression
+
+```{r}
+head(Orange)
+```
+
+```{r}
+summary(Orange)
+```
+
+```{r}
+cor(Orange$circumference, Orange$age)
+```
+
+```{r}
+plot(Orange$circumference, Orange$age)
+```
+
+## Create and fit model
+```{r}
+model <- lm(age ~ circumference, data=Orange)
+summary(model)
+```
+
+## Predict a value
+```{r}
+predict(model, data.frame('circumference'=800))
+```
+
+## Logistic Regression
+
+```{r}
+# install.packages("party")
+```
+
+```{r}
+library(party)
+
+head(readingSkills)
+```
+
+```{r}
+input.dat <- readingSkills[c(1:105),]
+
+png(file="decision_tree.png")
+
+output.tree <- ctree(
+  nativeSpeaker ~ age + shoeSize + score,
+  data = input.dat
+)
+
+plot(output.tree)
+
+dev.off()
+```
+
+
+
+

@@ -1,0 +1,106 @@
+---
+title: "RDAY2"
+author: "Subham Kundu"
+date: "4/7/2021"
+output: html_document
+---
+### 5. Factors
+Factors are R objects which are created using a vector. It stores the vector along with the distinct values of the elements in the vector as labels. the labels are always character irrespective of whether it is numeric,character or boolean.It is same as Pandas's Series.
+```{r}
+color <- c('red','orange','blue','red')
+color_factor <- factor(color)
+print(color_factor)
+print(nlevels(color_factor))
+```
+
+```{r}
+x <- c(1,2,3,2,1,1,3,2)
+x <-factor(x,levels =c(2,1,3),labels = c('a','b','c'))
+print(x)
+typeof(x)
+```
+
+### 5. Dataframe
+Like Pandas Dataframe R Dataframe is a tabular object unlike a matrix , it can contain different data types in different columns.For example, first column can be a boolean along with numeric second column. It is a list of vectors of equal length.
+```{r}
+people <- data.frame(
+  name = c('Adi','Kali','Rex'),
+  age = c(29,31,25),
+  weight = c(75.7,81.9,90)
+)
+print(people)
+```
+### Load DataSet
+```{r}
+library(datasets)
+```
+
+
+```{r}
+library(help="datasets") 
+```
+
+## check for help on plot
+```{r}
+?plot
+```
+## check Iris Dataset
+```{r}
+head(iris)
+```
+## Catagorical features
+
+```{r}
+plot(iris$Species)
+```
+## Continuos Feature
+```{r}
+plot(iris$Sepal.Length)
+```
+
+```{r}
+plot(iris$Sepal.Length,type='b')
+```
+```{r}
+plot(iris$Sepal.Length,type='h')
+```
+
+```{r}
+plot(iris$Petal.Width,type='b')
+```
+
+## Box Plot
+```{r}
+plot(iris$Species,iris$Sepal.Length)
+```
+```{r}
+plot(iris$Sepal.Length,iris$Sepal.Width,col="#cc0000",pch=19,main="Sepal length vs Sepal width",xlab="Sepal length",ylab = "Sepal width")
+```
+**We can also use function in R plots**
+```{r}
+plot(log,0,100)
+```
+## Bar Chart
+```{r}
+head(mtcars)
+```
+```{r}
+cyl <- table(mtcars$cyl)
+barplot(cyl,col="#22aaaa")
+#plot(cyl) -> straight lines
+```
+## Histogram
+```{r}
+hist(iris$Petal.Length)
+```
+```{r}
+par(mfrow = c(3,1))
+hist(iris$Sepal.Width[iris$Species =="setosa"],breaks= 9,xlim=c(2,4),main = "Setosa Petal",xlab= "Setosa Sepal Width")
+hist(iris$Sepal.Width[iris$Species =="versicolor"],breaks= 9,xlim=c(2,4),main = "Versicolor Petal",xlab= "Setosa Sepal Width")
+hist(iris$Sepal.Width[iris$Species =="virginica"],breaks= 9,xlim=c(2,4),main = "Virginica Petal",xlab= "Setosa Sepal Width")
+```
+## See Dataset Summary
+```{r}
+summary(iris)
+```
+
