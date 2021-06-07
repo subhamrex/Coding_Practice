@@ -1,4 +1,4 @@
-package com.javaprac;
+
 
 public class LinkedList {
     Node head;

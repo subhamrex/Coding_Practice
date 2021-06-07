@@ -1,4 +1,4 @@
-package com.javaprac;
+
 
 public class Stack {
     int[] stack = new int[6];

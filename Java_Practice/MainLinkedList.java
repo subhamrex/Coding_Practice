@@ -1,4 +1,4 @@
-package com.javaprac;
+
 
 public class MainLinkedList {
     public static void main(String[] args) {

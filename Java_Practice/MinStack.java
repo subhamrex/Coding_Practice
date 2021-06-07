@@ -1,4 +1,4 @@
-package com.javaprac;
+
 
 class MinStack {
     int[] stack = new int[10000];
