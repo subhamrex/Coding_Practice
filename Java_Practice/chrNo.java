@@ -11,6 +11,7 @@ public class chrNo {
         System.out.print("\nstring to be replaced with: ");
         String str3 = myObj.nextLine();
         String StringRes[] = new String[10];
+        myObj.close();
 
         String RepStr = str.replace(str2, str3);
         char string[] = str3.toCharArray();

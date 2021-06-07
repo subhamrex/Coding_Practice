@@ -1,7 +1,4 @@
 
-
-import java.net.SocketOption;
-
 public class PracStack {
     public static void main(String[] args) {
         Stack nums = new Stack();

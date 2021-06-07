@@ -22,6 +22,7 @@ public class SeqString{
 
         char string[] = str.toCharArray();
         int count = 0;
+        myObj.close();
 
         for (int i=0;i<str.length();i++)
         {
