@@ -7,7 +7,6 @@ def rec_to_sqr(M,N):
         i = N
         store = 0
         counter = 0
-        left = 0
         while(i < M):
             if M > store:
                 store = store + N
@@ -21,10 +20,13 @@ def rec_to_sqr(M,N):
         #print(counter) 
         #print(store)  
         left = M - store
-        if left == 1 or left == 2:
-            counter = counter + N
-            return counter
+
+        if N % 2 == 0 and (left == 3):
+            counter = counter + (N//2) + N    
+            return counter  
+
         else:
+            counter = counter + N
             return counter       
         
 if __name__ == '__main__':
