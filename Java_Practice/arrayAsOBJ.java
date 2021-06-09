@@ -1,3 +1,4 @@
+package Java_Practice;
 class objArray{
   String name;
   int age;

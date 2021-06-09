@@ -1,3 +1,4 @@
+package Java_Practice;
 public class substringOfString {
     static int issubstring(String A,String B) 
     {

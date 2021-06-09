@@ -1,4 +1,4 @@
-
+package Java_Practice;
 
 class MinStack {
     int[] stack = new int[10000];

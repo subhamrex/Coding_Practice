@@ -1,3 +1,4 @@
+package Java_Practice;
 import java.util.Scanner;
 import java.util.Random;
 public class SeqString{

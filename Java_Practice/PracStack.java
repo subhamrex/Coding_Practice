@@ -1,4 +1,4 @@
-
+package Java_Practice;
 public class PracStack {
     public static void main(String[] args) {
         Stack nums = new Stack();
